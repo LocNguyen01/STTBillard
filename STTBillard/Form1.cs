@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Drawing.Printing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -25,7 +26,10 @@ namespace STTBillard
         {
             count++;
             label2.Text = count.ToString();
-            
+            if (count >= 10)
+            {
+                label2.Location = new Point(49, 120);
+            }
         }
 
         private void bt_reset_Click(object sender, EventArgs e)
@@ -36,6 +40,7 @@ namespace STTBillard
             }
             count = 0;
             label2.Text = count.ToString();
+            label2.Location = new Point(60, 120);
         }
 
         public class PrintPanelExample
