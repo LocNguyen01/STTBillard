@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Printing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -36,16 +37,47 @@ namespace STTBillard
             count = 0;
             label2.Text = count.ToString();
         }
-        
+
+        public class PrintPanelExample
+        {
+            public void PrintPanel(Panel panel)
+            {
+                PrintDocument printDoc = new PrintDocument();
+                printDoc.PrintPage += (sender, e) =>
+                {
+                    // Create a bitmap from the panel
+                    Bitmap bitmap = new Bitmap(panel.Width, panel.Height);
+                    panel.DrawToBitmap(bitmap, new Rectangle(0, 0, panel.Width, panel.Height));
+
+                    // Draw the bitmap onto the print document
+                    e.Graphics.DrawImage(bitmap, 0, 0);
+                };
+
+                PrintDialog printDialog = new PrintDialog();
+                printDialog.Document = printDoc;
+
+                if (printDialog.ShowDialog() == DialogResult.OK)
+                {
+                    printDoc.Print();
+                }
+            }
+        }
+
         private void bt_in_Click(object sender, EventArgs e)
         {
-            
+            PrintPanelExample example = new PrintPanelExample();
+            example.PrintPanel(panel1);
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
             label4.Text = Date;
             label5.Text = date;
+        }
+
+        private void printPreviewDialog1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
