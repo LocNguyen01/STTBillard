@@ -24,6 +24,10 @@ namespace STTBillard
         int? count = 0;
         private void bt_next_Click(object sender, EventArgs e)
         {
+            Date = DateTime.Now.ToString("d/M/yyyy");
+            date = DateTime.Now.ToString("T");
+            label4.Text = Date;
+            label5.Text = date;
             count++;
             label2.Text = count.ToString();
             if (count >= 10)
@@ -70,6 +74,10 @@ namespace STTBillard
 
         private void bt_in_Click(object sender, EventArgs e)
         {
+            Date = DateTime.Now.ToString("d/M/yyyy");
+            date = DateTime.Now.ToString("T");
+            label4.Text = Date;
+            label5.Text = date;
             PrintPanelExample example = new PrintPanelExample();
             example.PrintPanel(panel1);
         }

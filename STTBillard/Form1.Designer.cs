@@ -53,7 +53,7 @@
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.label2);
-            this.panel1.Location = new System.Drawing.Point(54, 55);
+            this.panel1.Location = new System.Drawing.Point(21, 20);
             this.panel1.Margin = new System.Windows.Forms.Padding(0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(195, 230);
@@ -102,10 +102,10 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(8, 206);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(171, 12);
+            this.label1.Size = new System.Drawing.Size(164, 12);
             this.label1.TabIndex = 0;
             this.label1.Text = "Quý khách vui lòng đợi đến số thứ tự này!";
             // 
@@ -127,9 +127,9 @@
             // 
             this.bt_in.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.bt_in.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bt_in.Location = new System.Drawing.Point(7, 374);
+            this.bt_in.Location = new System.Drawing.Point(12, 317);
             this.bt_in.Name = "bt_in";
-            this.bt_in.Size = new System.Drawing.Size(287, 48);
+            this.bt_in.Size = new System.Drawing.Size(213, 48);
             this.bt_in.TabIndex = 1;
             this.bt_in.Text = "IN SỐ THỨ TỰ TIẾP THEO";
             this.bt_in.UseVisualStyleBackColor = true;
@@ -139,9 +139,9 @@
             // 
             this.bt_reset.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.bt_reset.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bt_reset.Location = new System.Drawing.Point(7, 428);
+            this.bt_reset.Location = new System.Drawing.Point(12, 371);
             this.bt_reset.Name = "bt_reset";
-            this.bt_reset.Size = new System.Drawing.Size(94, 35);
+            this.bt_reset.Size = new System.Drawing.Size(75, 44);
             this.bt_reset.TabIndex = 2;
             this.bt_reset.Text = "RESET";
             this.bt_reset.UseVisualStyleBackColor = true;
@@ -151,9 +151,9 @@
             // 
             this.bt_next.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.bt_next.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bt_next.Location = new System.Drawing.Point(107, 428);
+            this.bt_next.Location = new System.Drawing.Point(93, 371);
             this.bt_next.Name = "bt_next";
-            this.bt_next.Size = new System.Drawing.Size(187, 35);
+            this.bt_next.Size = new System.Drawing.Size(132, 44);
             this.bt_next.TabIndex = 3;
             this.bt_next.Text = "SỐ TIẾP THEO";
             this.bt_next.UseVisualStyleBackColor = true;
@@ -179,14 +179,14 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(305, 527);
+            this.ClientSize = new System.Drawing.Size(239, 437);
             this.Controls.Add(this.bt_next);
             this.Controls.Add(this.bt_reset);
             this.Controls.Add(this.bt_in);
             this.Controls.Add(this.panel1);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "STT";
+            this.Text = "STT (Copyright by Loc)";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
