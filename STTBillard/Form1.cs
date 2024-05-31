@@ -80,6 +80,12 @@ namespace STTBillard
             label5.Text = date;
             PrintPanelExample example = new PrintPanelExample();
             example.PrintPanel(panel1);
+            count++;
+            if (count >= 10)
+            {
+                label2.Location = new Point(49, 120);
+            }
+            label2.Text = count.ToString();
         }
 
         private void Form1_Load(object sender, EventArgs e)
