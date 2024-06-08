@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Drawing.Printing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
@@ -74,16 +75,36 @@ namespace STTBillard
                 }
             }
         }
+        static void ghitext(Form1 form)
+        {
+
+            var filename = "danhsachsdt.txt";
+            string contentfile = form.textBox1.Text + " | " + DateTime.Now.ToString("g");
+            var directory_mydoc = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
+            var fullpath = Path.Combine(directory_mydoc, filename);
+
+            if (File.Exists(fullpath))
+            {
+                // File đã tồn tại thêm sdt
+                File.AppendAllText(fullpath, contentfile + "\r\n");
+            }
+            else
+            {
+                // tạo mới vì chưa tồn tại file
+                File.WriteAllText(fullpath, contentfile);
+            }
+        }
 
         private void bt_in_Click(object sender, EventArgs e)
         {
+            ghitext(this);
             label9.Text = textBox1.Text;
-             Date = DateTime.Now.ToString("d/M/yyyy");
-             date = DateTime.Now.ToString("T");
-             label4.Text = Date;
-             label5.Text = date;
-             PrintPanelExample example = new PrintPanelExample();
-             example.PrintPanel(panel1);
+            Date = DateTime.Now.ToString("d/M/yyyy");
+            date = DateTime.Now.ToString("T");
+            label4.Text = Date;
+            label5.Text = date;
+            PrintPanelExample example = new PrintPanelExample();
+            example.PrintPanel(panel1);
              count++;
              if (count >= 10)
              {
@@ -100,6 +121,7 @@ namespace STTBillard
             label5.Text = date;
             label9.Text = "";
         }
+
         private void printPreviewDialog1_Load(object sender, EventArgs e)
         {
 

@@ -5,6 +5,8 @@ VisualStudioVersion = 17.9.34728.123
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "STTBillard", "STTBillard\STTBillard.csproj", "{E43B8396-5580-41D7-AC6D-F2046FF00B30}"
 EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "BillardSetup", "BillardSetup\BillardSetup.vdproj", "{FCCB9342-E79F-4B9B-8386-7C413AAC654A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,8 @@ Global
 		{E43B8396-5580-41D7-AC6D-F2046FF00B30}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E43B8396-5580-41D7-AC6D-F2046FF00B30}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E43B8396-5580-41D7-AC6D-F2046FF00B30}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FCCB9342-E79F-4B9B-8386-7C413AAC654A}.Debug|Any CPU.ActiveCfg = Debug
+		{FCCB9342-E79F-4B9B-8386-7C413AAC654A}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
